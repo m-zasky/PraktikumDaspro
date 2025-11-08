@@ -10,12 +10,11 @@ public class NilaiKelompok18 {
         double nilai, totalNilai, rataNilai, rataTertinggi = 0;
         int kelompokTertinggi = 0;
 
-        // Outer Loop
-        int i = 1;
-        while (i <= 6) {
+        // Outer Loop modifikasi menggunakan for loop
+        for (int i = 1; i <= 6; i++) {
             System.out.println("Kelompok " + i);
             totalNilai = 0;
-            
+
             // Inner Loop
             for (int j = 1; j <= 5; j++) {
                 System.out.print("Masukan Nilai ke-" + j + ":");
@@ -24,9 +23,8 @@ public class NilaiKelompok18 {
             }
 
             // rumus rata-rata nilai
-            rataNilai = totalNilai/5;
+            rataNilai = totalNilai / 5;
             System.out.println("Rata-Rata : " + rataNilai);
-
 
             // untuk menampilkan rata-rata tertinggi
             if (rataNilai > rataTertinggi) {
@@ -34,7 +32,6 @@ public class NilaiKelompok18 {
                 kelompokTertinggi = i;
             }
 
-            i++;
         }
 
         System.out.println("\n==================================================");
