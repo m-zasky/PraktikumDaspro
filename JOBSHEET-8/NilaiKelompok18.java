@@ -7,14 +7,15 @@ public class NilaiKelompok18 {
         Scanner sc = new Scanner(System.in);
 
         // deklarasi variabel
-        double nilai, totalNilai, rataNilai;
+        double nilai, totalNilai, rataNilai, rataTertinggi = 0;
+        int kelompokTertinggi = 0;
 
         // Outer Loop
         int i = 1;
         while (i <= 6) {
             System.out.println("Kelompok " + i);
             totalNilai = 0;
-
+            
             // Inner Loop
             for (int j = 1; j <= 5; j++) {
                 System.out.print("Masukan Nilai ke-" + j + ":");
@@ -22,11 +23,24 @@ public class NilaiKelompok18 {
                 totalNilai += nilai;
             }
 
+            // rumus rata-rata nilai
             rataNilai = totalNilai/5;
             System.out.println("Rata-Rata : " + rataNilai);
+
+
+            // untuk menampilkan rata-rata tertinggi
+            if (rataNilai > rataTertinggi) {
+                rataTertinggi = rataNilai;
+                kelompokTertinggi = i;
+            }
+
             i++;
         }
 
+        System.out.println("\n==================================================");
+        System.out.println("Kelompok Dengan Rata-Rata Tertinggi Adalah Kelompok : " + kelompokTertinggi);
+        System.out.println("Dengan Rata-Rata Nilai : " + rataTertinggi);
+        System.out.println("====================================================");
         sc.close();
     }
 }
